@@ -3,6 +3,7 @@
 .env.example 
 dist/
 coverage/
+audit/
 .DS_Store
 .idea/
 *.iml
@@ -11,6 +12,40 @@ coverage/
 *.njsproj
 *.sln
 *.sw?
+*.__pycache__/
+
 # Ignore Mac system files
 .DS_Store
 # Ignore Windows system files
+# --- Python & Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+.python-version
+
+# --- Build & Distribution ---
+dist/
+build/
+*.egg-info/
+.hatch/
+
+# --- Tools & Testing ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- VS Code & System ---
+.vscode/
+.DS_Store
+Thumbs.db
+
+# --- Project Specific (LangGraph/Auditor) ---
+*.log
+# If your auditor generates PDF/Image reports, ignore the output folder
+# reports/

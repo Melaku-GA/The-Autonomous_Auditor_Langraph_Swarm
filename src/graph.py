@@ -154,6 +154,9 @@ def create_audit_graph(
     # Create the graph
     workflow = StateGraph(AgentState)
     
+    # Add the rubric loader node
+    workflow.add_node("load_rubric", load_rubric)
+    
     # ========================================================================
     # Layer 1: Detective Layer (Parallel Fan-Out)
     # ========================================================================

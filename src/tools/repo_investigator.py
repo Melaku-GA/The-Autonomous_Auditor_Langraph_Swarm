@@ -461,7 +461,20 @@ class RepoInvestigator:
     def cleanup(self):
         """Remove temporary directory."""
         if os.path.exists(self.temp_dir):
-            shutil.rmtree(self.temp_dir)
+            try:
+                shutil.rmtree(self.temp_dir)
+            except PermissionError:
+                # On Windows, files might be locked - try to at least remove what we can
+                import stat
+                def handle_remove_readonly(func, path, exc_info):
+                    """Clear the readonly bit and reattempt removal."""
+                    if not os.access(path, os.W_OK):
+                        os.chmod(path, stat.S_IWUSR)
+                        func(path)
+                try:
+                    shutil.rmtree(self.temp_dir, onerror=handle_remove_readonly)
+                except:
+                    pass  # Best effort cleanup
     
     def run_full_forensic_analysis(self, repo_url: str) -> Dict[str, Any]:
         """

@@ -181,10 +181,17 @@ INSTRUCTIONS:
         opinions = []
         
         for dimension in state.get('rubric_dimensions', []):
-            # Get evidence for this dimension
-            dimension_id = dimension.get('id', '')
-            dimension_name = dimension.get('name', '')
-            dimension_desc = dimension.get('forensic_instruction', '')
+            # Handle both dict and Pydantic model formats
+            if hasattr(dimension, 'model_dump'):
+                # It's a Pydantic model
+                dimension_id = dimension.id
+                dimension_name = dimension.name
+                dimension_desc = dimension.forensic_instruction
+            else:
+                # It's a dict
+                dimension_id = dimension.get('id', '')
+                dimension_name = dimension.get('name', '')
+                dimension_desc = dimension.get('forensic_instruction', '')
             
             # Get relevant evidence from state
             all_evidence = []
@@ -268,9 +275,17 @@ INSTRUCTIONS:
         opinions = []
         
         for dimension in state.get('rubric_dimensions', []):
-            dimension_id = dimension.get('id', '')
-            dimension_name = dimension.get('name', '')
-            dimension_desc = dimension.get('forensic_instruction', '')
+            # Handle both dict and Pydantic model formats
+            if hasattr(dimension, 'model_dump'):
+                # It's a Pydantic model
+                dimension_id = dimension.id
+                dimension_name = dimension.name
+                dimension_desc = dimension.forensic_instruction
+            else:
+                # It's a dict
+                dimension_id = dimension.get('id', '')
+                dimension_name = dimension.get('name', '')
+                dimension_desc = dimension.get('forensic_instruction', '')
             
             all_evidence = []
             evidences_dict = state.get('evidences', {})
@@ -351,9 +366,17 @@ INSTRUCTIONS:
         opinions = []
         
         for dimension in state.get('rubric_dimensions', []):
-            dimension_id = dimension.get('id', '')
-            dimension_name = dimension.get('name', '')
-            dimension_desc = dimension.get('forensic_instruction', '')
+            # Handle both dict and Pydantic model formats
+            if hasattr(dimension, 'model_dump'):
+                # It's a Pydantic model
+                dimension_id = dimension.id
+                dimension_name = dimension.name
+                dimension_desc = dimension.forensic_instruction
+            else:
+                # It's a dict
+                dimension_id = dimension.get('id', '')
+                dimension_name = dimension.get('name', '')
+                dimension_desc = dimension.get('forensic_instruction', '')
             
             all_evidence = []
             evidences_dict = state.get('evidences', {})

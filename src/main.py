@@ -2,10 +2,13 @@ import argparse
 import os
 import json
 from datetime import datetime
-from .graph import create_auditor_graph
+from .graph import create_audit_graph
+from pydantic.v1.fields import FieldInfo
+from dotenv import load_dotenv
 
 def main():
-    # 1. Setup Argument Parser
+    # Load environment variables from .env file
+    load_dotenv()
     parser = argparse.ArgumentParser(description="Automaton Auditor CLI")
     parser.add_argument("--repo", required=True, help="Target GitHub Repository URL")
     parser.add_argument("--pdf", required=True, help="Path to the Architectural PDF Report")
@@ -27,8 +30,8 @@ def main():
     }
 
     # 4. Execute the Swarm
-    print(f"🚀 Unleashing the Swarm on: {args.repo}...")
-    app = create_auditor_graph()
+    print(f"Running audit on: {args.repo}...")
+    app = create_audit_graph()
     final_state = app.invoke(initial_state)
 
     # 5. Determine Output Folder
@@ -47,7 +50,7 @@ def main():
     with open(filepath, "w") as f:
         f.write(final_state["final_report"])
 
-    print(f"✅ Audit Complete! Report saved to: {filepath}")
+    print(f"Audit Complete! Report saved to: {filepath}")
 
 if __name__ == "__main__":
     main()
