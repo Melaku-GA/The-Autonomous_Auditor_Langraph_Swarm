@@ -30,6 +30,7 @@ from operator import ior, add
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 
 from src.state import AgentState, RubricDimension
 from src.nodes.detectives import (
@@ -149,7 +150,18 @@ def create_audit_graph(
     
     # Initialize default LLM if not provided
     if llm is None:
-        llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
+        # Try to use Ollama (local), fall back to OpenAI if not available
+        try:
+            llm = ChatOllama(model="llama3", temperature=0.2)
+        except Exception:
+            llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
+    
+    # Initialize default vision LLM if not provided
+    if vision_llm is None:
+        try:
+            vision_llm = ChatOllama(model="llama3", temperature=0.2)
+        except Exception:
+            vision_llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
     
     # Create the graph
     workflow = StateGraph(AgentState)

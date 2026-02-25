@@ -13,6 +13,7 @@ import json
 from typing import Dict, List, Any, Optional
 from datetime import datetime
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
@@ -151,7 +152,10 @@ Remember: You're the tie-breaker. Be objective about what works."""
 def create_prosecutor_judge(llm=None):
     """Create a Prosecutor judge agent with structured output."""
     if llm is None:
-        llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
+        try:
+            llm = ChatOllama(model="llama3", temperature=0.2)
+        except Exception:
+            llm = ChatOpenAI(model="gpt-4o", temperature=0.2)
     
     parser = PydanticOutputParser(pydantic_object=JudgeScore)
     
@@ -245,7 +249,10 @@ INSTRUCTIONS:
 def create_defense_judge(llm=None):
     """Create a Defense judge agent with structured output."""
     if llm is None:
-        llm = ChatOpenAI(model="gpt-4o", temperature=0.3)
+        try:
+            llm = ChatOllama(model="llama3", temperature=0.3)
+        except Exception:
+            llm = ChatOpenAI(model="gpt-4o", temperature=0.3)
     
     parser = PydanticOutputParser(pydantic_object=JudgeScore)
     
@@ -336,7 +343,10 @@ INSTRUCTIONS:
 def create_techlead_judge(llm=None):
     """Create a Tech Lead judge agent with structured output."""
     if llm is None:
-        llm = ChatOpenAI(model="gpt-4o", temperature=0.1)
+        try:
+            llm = ChatOllama(model="llama3", temperature=0.1)
+        except Exception:
+            llm = ChatOpenAI(model="gpt-4o", temperature=0.1)
     
     parser = PydanticOutputParser(pydantic_object=JudgeScore)
     
