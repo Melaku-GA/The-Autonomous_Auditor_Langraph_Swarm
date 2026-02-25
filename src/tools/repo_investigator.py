@@ -18,6 +18,102 @@ from dataclasses import dataclass, field
 
 import git
 from git import Repo, GitCommandError
+from enum import Enum
+from dataclasses import dataclass, field
+
+
+class GitErrorType(Enum):
+    """Enumeration of git operation error types."""
+    AUTH_FAILURE = "auth_failure"
+    REPO_NOT_FOUND = "repo_not_found"
+    EMPTY_REPO = "empty_repo"
+    NETWORK_ERROR = "network_error"
+    BRANCH_NOT_FOUND = "branch_not_found"
+    CLONE_FAILED = "clone_failed"
+    UNKNOWN = "unknown"
+
+
+@dataclass
+class GitOperationResult:
+    """
+    Typed result for git operations with explicit error handling.
+    
+    Provides clear, typed error results for various git edge cases.
+    """
+    success: bool
+    error_type: Optional[GitErrorType] = None
+    error_message: str = ""
+    details: Dict[str, Any] = field(default_factory=dict)
+    
+    @staticmethod
+    def ok(message: str = "", details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create a successful result."""
+        return GitOperationResult(
+            success=True,
+            error_type=None,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def auth_failure(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create an authentication failure result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.AUTH_FAILURE,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def not_found(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create a repository not found result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.REPO_NOT_FOUND,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def empty_repo(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create an empty repository result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.EMPTY_REPO,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def network_error(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create a network error result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.NETWORK_ERROR,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def branch_not_found(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create a branch not found result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.BRANCH_NOT_FOUND,
+            error_message=message,
+            details=details or {}
+        )
+    
+    @staticmethod
+    def clone_failed(message: str, details: Dict[str, Any] = None) -> 'GitOperationResult':
+        """Create a clone failed result."""
+        return GitOperationResult(
+            success=False,
+            error_type=GitErrorType.CLONE_FAILED,
+            error_message=message,
+            details=details or {}
+        )
 
 
 @dataclass
@@ -141,6 +237,97 @@ class RepoInvestigator:
         except Exception as e:
             return False, f"Unexpected error during clone: {str(e)}"
     
+    def clone_repository_typed(self, url: str) -> GitOperationResult:
+        """
+        Clone a repository with typed error handling.
+        
+        Returns:
+            GitOperationResult with typed error classification
+        """
+        try:
+            # Generate unique subdirectory name
+            repo_name = url.split("/")[-1].replace(".git", "")
+            target_dir = os.path.join(self.temp_dir, repo_name)
+            
+            if os.path.exists(target_dir):
+                shutil.rmtree(target_dir)
+            
+            # Try main branch first
+            try:
+                self.repo = Repo.clone_from(
+                    url, 
+                    target_dir,
+                    depth=50,
+                    branch='main'
+                )
+            except GitCommandError as e:
+                # Check error type
+                error_str = str(e).lower()
+                
+                # Authentication failure
+                if 'authentication' in error_str or 'credential' in error_str or 'unauthorized' in error_str:
+                    return GitOperationResult.auth_failure(
+                        f"Authentication failed for repository: {url}",
+                        {'url': url, 'original_error': str(e)}
+                    )
+                
+                # Repository not found
+                if 'not found' in error_str or 'does not exist' in error_str:
+                    return GitOperationResult.not_found(
+                        f"Repository not found: {url}",
+                        {'url': url, 'original_error': str(e)}
+                    )
+                
+                # Network error
+                if 'network' in error_str or 'connection' in error_str or 'timeout' in error_str:
+                    return GitOperationResult.network_error(
+                        f"Network error while cloning: {url}",
+                        {'url': url, 'original_error': str(e)}
+                    )
+                
+                # Try alternative branches
+                alt_branches = ['master', 'develop', 'main']
+                for branch in alt_branches:
+                    try:
+                        self.repo = Repo.clone_from(
+                            url, 
+                            target_dir,
+                            depth=50,
+                            branch=branch
+                        )
+                        self.repo_path = target_dir
+                        return GitOperationResult.ok(
+                            f"Successfully cloned using branch {branch}",
+                            {'branch': branch, 'path': target_dir}
+                        )
+                    except GitCommandError:
+                        continue
+                
+                # Branch not found
+                return GitOperationResult.branch_not_found(
+                    f"Could not find any valid branch (tried: main, master, develop)",
+                    {'url': url, 'tried_branches': alt_branches, 'original_error': str(e)}
+                )
+            
+            self.repo_path = target_dir
+            return GitOperationResult.ok(
+                f"Successfully cloned to {target_dir}",
+                {'path': target_dir}
+            )
+            
+        except Exception as e:
+            error_str = str(e).lower()
+            
+            # Determine error type
+            if 'authentication' in error_str or 'credential' in error_str:
+                return GitOperationResult.auth_failure(str(e), {'original_error': str(e)})
+            if 'not found' in error_str or 'does not exist' in error_str:
+                return GitOperationResult.not_found(str(e), {'original_error': str(e)})
+            if 'network' in error_str or 'connection' in error_str:
+                return GitOperationResult.network_error(str(e), {'original_error': str(e)})
+            
+            return GitOperationResult.clone_failed(str(e), {'original_error': str(e)})
+    
     def analyze_git_history(self) -> GitForensicReport:
         """
         Analyze git log for commit patterns.
@@ -156,6 +343,13 @@ class RepoInvestigator:
             
         try:
             commits = list(self.repo.iter_commits(max_count=100))
+            
+            # Check for empty repository
+            if len(commits) == 0:
+                report.commit_count = 0
+                report.analysis = "Empty repository - no commits found"
+                return report
+            
             report.commit_count = len(commits)
             
             for commit in commits:

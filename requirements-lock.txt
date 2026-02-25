@@ -1,0 +1,90 @@
+# =============================================================================
+# Automaton Auditor - Locked Dependencies
+# =============================================================================
+# This file pins all dependencies to specific versions for reproducibility.
+# DO NOT edit manually - regenerate with: pip freeze > requirements-lock.txt
+# Install with: pip install -r requirements-lock.txt
+# =============================================================================
+
+# Core LangGraph and LangChain
+langgraph==0.2.48
+langgraph-checkpoint==2.0.3
+langchain-core==0.3.24
+langchain-openai==0.2.10
+langchain-anthropic==0.2.5
+
+# Pydantic and validation
+pydantic==2.10.3
+pydantic-settings==2.7.1
+
+# Environment and configuration
+python-dotenv==1.0.1
+
+# Git operations
+GitPython==3.1.43
+
+# AST parsing
+astor==0.8.1
+
+# PDF handling
+PyPDF2==3.0.1
+pypdf==5.1.0
+pdf2image==1.17.0
+
+# Image processing
+Pillow==11.1.0
+
+# File type detection
+python-magic==0.4.27
+
+# Tokenization
+tiktoken==0.8.0
+
+# Retry logic
+tenacity==9.0.0
+
+# Rich terminal output
+rich==13.9.4
+
+# Type checking support
+typing-extensions==4.12.2
+
+# Async support
+typing-inspection==0.2.0
+
+# Debugging
+stack-data==0.6.3
+executing==2.1.0
+
+# JSON handling
+orjson==3.10.12
+
+# HTTP client (for API calls)
+httpx==0.28.1
+httpx-sse==0.4.0
+
+# Local LLM support
+langchain-ollama==0.1.1
+
+# Certificate handling (for secure connections)
+certifi==2024.12.14
+
+# Date/time handling
+python-dateutil==2.9.0
+
+# Path handling
+pathspec==0.12.1
+
+# Windows compatibility (for file operations)
+pywin32==308; sys_platform == "win32"
+
+# Packaging
+setuptools==75.8.0
+wheel==0.45.1
+
+# Development dependencies (optional)
+# pytest==8.3.4
+# pytest-asyncio==0.24.0
+# black==24.10.0
+# ruff==0.8.4
+# mypy==1.14.1

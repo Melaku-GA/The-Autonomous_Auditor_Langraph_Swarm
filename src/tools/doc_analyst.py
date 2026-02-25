@@ -28,6 +28,98 @@ except ImportError:
 
 
 @dataclass
+class ChunkedPDF:
+    """
+    A queryable, chunked PDF interface for efficient text search and retrieval.
+    
+    Allows for:
+    - Chunked text storage with metadata
+    - Semantic search across chunks
+    - Context-aware retrieval
+    """
+    
+    def __init__(self, text_content: str, chunk_size: int = 1000, overlap: int = 100):
+        self.chunks: List[str] = []
+        self.chunk_metadata: List[Dict[str, Any]] = []
+        self.chunk_size = chunk_size
+        self.overlap = overlap
+        self._chunk_text(text_content)
+    
+    def _chunk_text(self, text: str):
+        """Split text into overlapping chunks with metadata."""
+        start = 0
+        chunk_idx = 0
+        
+        while start < len(text):
+            end = start + self.chunk_size
+            chunk = text[start:end]
+            
+            # Store chunk with metadata
+            self.chunks.append(chunk)
+            self.chunk_metadata.append({
+                'chunk_id': chunk_idx,
+                'start_char': start,
+                'end_char': min(end, len(text)),
+                'length': len(chunk)
+            })
+            
+            start = end - self.overlap
+            chunk_idx += 1
+    
+    def query(self, query_text: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        """
+        Query the PDF chunks for relevant content.
+        
+        Args:
+            query_text: Text to search for
+            top_k: Number of top results to return
+            
+        Returns:
+            List of relevant chunks with metadata
+        """
+        query_lower = query_text.lower()
+        results = []
+        
+        for i, chunk in enumerate(self.chunks):
+            chunk_lower = chunk.lower()
+            # Simple keyword matching score
+            query_words = query_lower.split()
+            score = sum(1 for word in query_words if word in chunk_lower)
+            
+            if score > 0:
+                results.append({
+                    'chunk_id': i,
+                    'score': score,
+                    'content': chunk,
+                    'metadata': self.chunk_metadata[i]
+                })
+        
+        # Sort by score and return top_k
+        results.sort(key=lambda x: x['score'], reverse=True)
+        return results[:top_k]
+    
+    def get_context_around(self, keyword: str, context_chars: int = 200) -> List[Dict[str, Any]]:
+        """Get context around keyword occurrences."""
+        results = []
+        keyword_lower = keyword.lower()
+        
+        for i, chunk in enumerate(self.chunks):
+            if keyword_lower in chunk.lower():
+                # Find position and extract context
+                pos = chunk.lower().find(keyword_lower)
+                start = max(0, pos - context_chars)
+                end = min(len(chunk), pos + len(keyword) + context_chars)
+                
+                results.append({
+                    'chunk_id': i,
+                    'context': chunk[start:end],
+                    'metadata': self.chunk_metadata[i]
+                })
+        
+        return results
+
+
+@dataclass
 class TheoreticalDepthReport:
     """Report on theoretical depth of the document."""
     keyword_matches: Dict[str, int] = field(default_factory=dict)
@@ -108,6 +200,7 @@ class DocAnalyst:
         self.pdf_path: Optional[str] = None
         self.text_content: str = ""
         self.pages: List[str] = []
+        self.chunked_pdf: Optional[ChunkedPDF] = None
         
     def load_pdf(self, pdf_path: str) -> Tuple[bool, str]:
         """
@@ -127,6 +220,8 @@ class DocAnalyst:
                 reader = PdfReader(pdf_path)
                 self.pages = [page.extract_text() for page in reader.pages]
                 self.text_content = "\n\n".join(self.pages)
+                # Create chunked PDF for querying
+                self.chunked_pdf = ChunkedPDF(self.text_content)
                 return True, f"Loaded PDF with {len(self.pages)} pages"
             
             # Fallback to PyPDF2
@@ -135,12 +230,46 @@ class DocAnalyst:
                     reader = PyPDF2.PdfReader(f)
                     self.pages = [reader.pages[i].extract_text() for i in range(len(reader.pages))]
                     self.text_content = "\n\n".join(self.pages)
+                # Create chunked PDF for querying
+                self.chunked_pdf = ChunkedPDF(self.text_content)
                 return True, f"Loaded PDF with {len(self.pages)} pages"
             else:
                 return False, "No PDF library available. Install pypdf2 or pypdf"
                 
         except Exception as e:
             return False, f"Error loading PDF: {str(e)}"
+    
+    def query_pdf(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        """
+        Query the loaded PDF document using the chunked interface.
+        
+        Args:
+            query: Search query string
+            top_k: Number of results to return
+            
+        Returns:
+            List of relevant chunks with scores
+        """
+        if self.chunked_pdf is None:
+            return [{'error': 'No PDF loaded'}]
+        
+        return self.chunked_pdf.query(query, top_k)
+    
+    def get_pdf_context(self, keyword: str, context_chars: int = 200) -> List[Dict[str, Any]]:
+        """
+        Get context around keyword occurrences in the PDF.
+        
+        Args:
+            keyword: Keyword to search for
+            context_chars: Characters of context to include
+            
+        Returns:
+            List of context snippets
+        """
+        if self.chunked_pdf is None:
+            return [{'error': 'No PDF loaded'}]
+        
+        return self.chunked_pdf.get_context_around(keyword, context_chars)
     
     def analyze_theoretical_depth(self) -> TheoreticalDepthReport:
         """

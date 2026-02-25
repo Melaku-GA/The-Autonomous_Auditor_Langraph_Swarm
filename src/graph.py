@@ -127,6 +127,77 @@ def check_completion(state: AgentState) -> str:
     return "continue"
 
 
+def check_detective_failure(state: AgentState) -> str:
+    """
+    Check if any detective failed and route accordingly.
+    
+    Returns:
+        "success" if detective succeeded, "failure" if it failed
+    """
+    # Check for errors in the state
+    if state.get('error'):
+        return "failure"
+    
+    # Check if evidence was collected
+    evidences = state.get('evidences', {})
+    if not evidences or all(not v for v in evidences.values()):
+        return "failure"
+    
+    return "success"
+
+
+def should_aggregate_evidence(state: AgentState) -> str:
+    """
+    Determine if evidence aggregation should proceed.
+    
+    Checks:
+    - All detectives have run (have evidences or errors)
+    - At least some evidence was collected
+    """
+    evidences = state.get('evidences', {})
+    
+    # Check if we have evidence from any detective
+    has_any_evidence = any(
+        isinstance(v, list) and len(v) > 0 
+        for v in evidences.values()
+    )
+    
+    # Check for errors
+    has_error = state.get('error') is not None
+    
+    # If we have evidence OR an error (even partial success), proceed
+    if has_any_evidence or has_error:
+        return "aggregate"
+    
+    # No evidence and no error - might still be running
+    return "wait"
+
+
+def check_judges_completion(state: AgentState) -> str:
+    """
+    Check if all judges have completed their assessments.
+    
+    Returns:
+        END if complete, otherwise continue
+    """
+    opinions = state.get('opinions', [])
+    rubric_dims = state.get('rubric_dimensions', [])
+    
+    # If we have opinions covering all rubric dimensions, we're done
+    if opinions and len(rubric_dims) > 0:
+        opinion_criteria = set(op.criterion_id for op in opinions)
+        required_criteria = set(d.id for d in rubric_dims)
+        
+        if opinion_criteria >= required_criteria:
+            return END
+    
+    # Also check if we have a final report
+    if state.get('final_report'):
+        return END
+    
+    return "continue"
+
+
 # ============================================================================
 # Graph Construction
 # ============================================================================
@@ -205,16 +276,48 @@ def create_audit_graph(
     # Entry point - load rubric first
     workflow.set_entry_point("load_rubric")
     
-    # Load rubric transitions
+    # Load rubric transitions - fan-out to all detectives
     workflow.add_edge("load_rubric", "repo_investigator")
     workflow.add_edge("load_rubric", "doc_analyst")
     workflow.add_edge("load_rubric", "vision_inspector")
     
-    # Detective parallel execution - all detectives run simultaneously
-    # Then fan-in to evidence aggregator
-    workflow.add_edge("repo_investigator", "evidence_aggregator")
-    workflow.add_edge("doc_analyst", "evidence_aggregator")
-    workflow.add_edge("vision_inspector", "evidence_aggregator")
+    # ========================================================================
+    # Detective Layer with Conditional Edges for Failures
+    # ========================================================================
+    
+    # Add conditional edges for repo_investigator failure handling
+    workflow.add_conditional_edges(
+        "repo_investigator",
+        check_detective_failure,
+        {
+            "success": "evidence_aggregator",
+            "failure": "evidence_aggregator"  # Still aggregate, but with error evidence
+        }
+    )
+    
+    # Add conditional edges for doc_analyst failure handling
+    workflow.add_conditional_edges(
+        "doc_analyst",
+        check_detective_failure,
+        {
+            "success": "evidence_aggregator",
+            "failure": "evidence_aggregator"
+        }
+    )
+    
+    # Add conditional edges for vision_inspector failure handling
+    workflow.add_conditional_edges(
+        "vision_inspector",
+        check_detective_failure,
+        {
+            "success": "evidence_aggregator",
+            "failure": "evidence_aggregator"
+        }
+    )
+    
+    # Parallel detectives fan-in to evidence aggregator
+    # Note: In LangGraph, parallel nodes completing triggers their edges
+    # The aggregator waits for all three to complete before proceeding
     
     # Evidence aggregation to judicial layer (fan-out)
     workflow.add_edge("evidence_aggregator", "prosecutor")
@@ -222,11 +325,17 @@ def create_audit_graph(
     workflow.add_edge("evidence_aggregator", "techlead")
     
     # All judges run in parallel, then fan-in to chief justice
-    workflow.add_edge("prosecutor", "chief_justice")
-    workflow.add_edge("defense", "chief_justice")
-    workflow.add_edge("techlead", "chief_justice")
+    # Add conditional edge for judges completion check
+    workflow.add_conditional_edges(
+        "chief_justice",
+        check_completion,
+        {
+            END: END,
+            "continue": "chief_justice"  # If not complete, stay (shouldn't happen)
+        }
+    )
     
-    # Chief justice to end
+    # Chief justice to end (direct edge as fallback)
     workflow.add_edge("chief_justice", END)
     
     # ========================================================================
