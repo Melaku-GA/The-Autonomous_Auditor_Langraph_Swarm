@@ -1,0 +1,16 @@
+*.log
+.env
+.env.example 
+dist/
+coverage/
+.DS_Store
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Ignore Mac system files
+.DS_Store
+# Ignore Windows system files
