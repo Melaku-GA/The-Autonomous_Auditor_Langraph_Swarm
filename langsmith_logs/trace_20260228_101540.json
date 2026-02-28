@@ -1,0 +1,374 @@
+{
+  "exported_at": "2026-02-28T10:15:40.181191",
+  "total_traces": 31,
+  "traces": [
+    {
+      "trace_id": "019ca309-dd14-7d33-bd0c-de4405ad38ed",
+      "timestamp": "2026-02-28T09:57:38.580394",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[{'id': 'forensic_accuracy_code', 'name': 'Forensic Accuracy (Codebase)', 'target_artifact': 'github_repo', 'forensic_instruction': \"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", 'judicial_logic': {'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}}, {'id': 'forensic_accuracy_docs', 'name': 'Forensic Accuracy (Documentation)', 'target_artifact': 'pdf_report', 'forensic_instruction': \"Scan PDF for theoretical depth. Verify mentions of 'Dialectical Synthesis' and 'Met",
+        "evidences": "{}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{}",
+        "opinions": "[]",
+        "final_report": ""
+      }
+    },
+    {
+      "trace_id": "019ca309-dd19-74a0-8365-de50c6f1e800",
+      "timestamp": "2026-02-28T09:57:38.585158",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': []}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": "failure"
+    },
+    {
+      "trace_id": "019ca309-dd1d-7de1-b420-0af3663de0c2",
+      "timestamp": "2026-02-28T09:57:38.589631",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': []}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": "failure"
+    },
+    {
+      "trace_id": "019ca309-fc44-72c1-8dba-4a7ee51de116",
+      "timestamp": "2026-02-28T09:57:46.564705",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Clone Repository', found=False, content=\"Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", location='https://github.com/example/repo', rationale=\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", confidence=1.0, evidence_class='Git Forensic', time",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": "success"
+    },
+    {
+      "trace_id": "019ca309-fc47-7722-ae66-1295010fe985",
+      "timestamp": "2026-02-28T09:57:46.567500",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Clone Repository', found=False, content=\"Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", location='https://github.com/example/repo', rationale=\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", confidence=1.0, evidence_class='Git Forensic', time",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": {
+        "evidence_summary": "Git Forensic: 0/1 items found",
+        "total_evidence_count": "1"
+      }
+    },
+    {
+      "trace_id": "019ca309-fc4e-72d1-89aa-e451b56a3947",
+      "timestamp": "2026-02-28T09:57:46.574604",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca309-fc6c-7ec0-8db2-4d2310cfbf81",
+      "timestamp": "2026-02-28T09:57:46.604493",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False, location=https://github.com/example/repo)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca309-fc73-71f2-b8e0-549dd7487afe",
+      "timestamp": "2026-02-28T09:57:46.611764",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  std... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca309-fc76-71c0-bba3-39b4f50b2909",
+      "timestamp": "2026-02-28T09:57:46.615024",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca30b-b050-7633-bbd3-fe42313c9dfd",
+      "timestamp": "2026-02-28T09:59:38.192428",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\\n\"score\": 1,\\n\"reasoning\": \"The codebase is not viable due to the failed repository cloning. This indicates a fundamental issue with the project\\'s infrastructure, making it impossible to assess the Pydantic State models or sandboxed \\'git clone\\' operations.\",\\n\"cited_evidence\": [\\n\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd(\\'git\\') failed due to: exit code(128)\"\\n]\\n}\\n\\n' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T06:59:38.1860812Z', 'done': True, 'done_reason': 'stop', 'total_duration': 111549802600, 'load_duration': 29785942800, 'prompt_eval_count': 762, 'prompt_eval_duration': 55665032700, 'eval_count': 94, 'eval_duration': 20756377800, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca309-fc76-71c0-bba3-39b4f50b2909-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 762, 'output_tokens': 94, 'total_tokens': 856}",
+      "outputs": "score=1 reasoning=\"The codebase is not viable due to the failed repository cloning. This indicates a fundamental issue with the project's infrastructure, making it impossible to assess the Pydantic State models or sandboxed 'git clone' operations.\" cited_evidence=[\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\"]"
+    },
+    {
+      "trace_id": "019ca30b-b052-74a1-ad0f-ed1451592900",
+      "timestamp": "2026-02-28T09:59:38.194249",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  std... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca30b-b053-7d03-8ed5-32b07c474550",
+      "timestamp": "2026-02-28T09:59:38.195862",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca30d-3c8b-7982-9f8c-7453c0cc1bd9",
+      "timestamp": "2026-02-28T10:01:19.627153",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"The provided codebase fails to meet the Forensic Accuracy criterion due to a fundamental failure in cloning the repository. The \\'git clone\\' command fails with an exit code of 128, indicating that the repository was not found. This is a critical issue that prevents any further analysis or verification of the codebase.\", \"cited_evidence\": [\"https://github.com/example/repo/\"]}\\n\\n ' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:01:19.6251901Z', 'done': True, 'done_reason': 'stop', 'total_duration': 212989556100, 'load_duration': 29785959100, 'prompt_eval_count': 832, 'prompt_eval_duration': 72986845800, 'eval_count': 92, 'eval_duration': 23417323600, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca309-fc70-7af1-8222-00a3b74d40e5-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 832, 'output_tokens': 92, 'total_tokens': 924}",
+      "outputs": "score=1 reasoning=\"The provided codebase fails to meet the Forensic Accuracy criterion due to a fundamental failure in cloning the repository. The 'git clone' command fails with an exit code of 128, indicating that the repository was not found. This is a critical issue that prevents any further analysis or verification of the codebase.\" cited_evidence=['https://github.com/example/repo/']"
+    },
+    {
+      "trace_id": "019ca30d-3c8d-7bd0-b9f8-ec20a001273c",
+      "timestamp": "2026-02-28T10:01:19.629103",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False, location=https://github.com/example/repo)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca30d-3c8f-7ee2-9527-964c4c3645b1",
+      "timestamp": "2026-02-28T10:01:19.631753",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\n\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\n- Question every claim\n- Look for security flaws, shortcuts, and laziness\n- If something seems too good to be true, it probably is\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Apply STRICT interpretation of the requirements\n3. Charge specific violations when evidence doesn't meet standards\n4. Assign LO..."
+      ]
+    },
+    {
+      "trace_id": "019ca30f-25c5-7312-8988-ecfd9c23bd79",
+      "timestamp": "2026-02-28T10:03:24.869605",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 3, \"reasoning\": \"Although the codebase failed to clone the repository due to a non-existent repository, I believe that the effort and intent behind this attempt are commendable. The fact that they attempted to use Pydantic State models in \\'src/graph.py\\' or \\'src/state.py\\' shows a deep understanding of the requirement. Additionally, the inclusion of sandboxed \\'git clone\\' operations in \\'src/tools/\\' demonstrates a willingness to learn and experiment. While the implementation may not have been successful, I believe that this attempt deserves recognition for its creative approach and struggle to understand the requirements.\", \"cited_evidence\": [\"Failed to clone: Failed to clone: Cmd(\\'git\\') failed due to: exit code(128)\"]}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:03:24.8669316Z', 'done': True, 'done_reason': 'stop', 'total_duration': 338231949400, 'load_duration': 29784500200, 'prompt_eval_count': 826, 'prompt_eval_d",
+      "outputs": "score=3 reasoning=\"Although the codebase failed to clone the repository due to a non-existent repository, I believe that the effort and intent behind this attempt are commendable. The fact that they attempted to use Pydantic State models in 'src/graph.py' or 'src/state.py' shows a deep understanding of the requirement. Additionally, the inclusion of sandboxed 'git clone' operations in 'src/tools/' demonstrates a willingness to learn and experiment. While the implementation may not have been successful, I believe that this attempt deserves recognition for its creative approach and struggle to understand the requirements.\" cited_evidence=[\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\"]"
+    },
+    {
+      "trace_id": "019ca30f-25c7-7ff3-b91a-3dab4426c60f",
+      "timestamp": "2026-02-28T10:03:24.871295",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca30f-25c8-72b1-a443-6ceea165de57",
+      "timestamp": "2026-02-28T10:03:24.872997",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\n\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\n- Give credit for deep understanding even if implementation is flawed\n- Look for creative workarounds and clever solutions\n- Consider the \"struggle\" and iteration shown in git history\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion  \n2. Find MITIGATING factors that warrant higher ..."
+      ]
+    },
+    {
+      "trace_id": "019ca310-9724-7bc0-8dd9-30ee451c9da7",
+      "timestamp": "2026-02-28T10:04:59.428792",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\\n\"score\": 1,\\n\"reasoning\": \"The code fails to clone the repository, indicating a fundamental technical issue. This prevents any further analysis or evaluation of the judicial nuance and dialectics criterion.\",\\n\"cited_evidence\": [\\n\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd(\\'git\\') failed due to: exit code(128)\"\\n]\\n}\\n\\n' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:04:59.4228804Z', 'done': True, 'done_reason': 'stop', 'total_duration': 321225953600, 'load_duration': 224208500, 'prompt_eval_count': 759, 'prompt_eval_duration': 70345961500, 'eval_count': 81, 'eval_duration': 20077600600, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca30b-b053-7d03-8ed5-32b07c474550-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 759, 'output_tokens': 81, 'total_tokens': 840}",
+      "outputs": "score=1 reasoning='The code fails to clone the repository, indicating a fundamental technical issue. This prevents any further analysis or evaluation of the judicial nuance and dialectics criterion.' cited_evidence=[\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\"]"
+    },
+    {
+      "trace_id": "019ca310-9726-7cf3-82a6-e34f27a404bd",
+      "timestamp": "2026-02-28T10:04:59.430129",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  std... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca310-9727-7eb2-8361-523f5742062a",
+      "timestamp": "2026-02-28T10:04:59.431909",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca312-7ab7-7482-b0cd-1d6c038829b1",
+      "timestamp": "2026-02-28T10:07:03.223324",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"Fundamental failure to demonstrate judicial nuance and dialectics. The provided evidence shows a failed clone operation due to the repository not being found. This lack of basic functionality is a significant issue that cannot be overlooked. Furthermore, there is no indication of distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas, nor is there any attempt to force structured JSON output. Overall, this evidence fails to meet the rubric criterion.\", \"cited_evidence\": [\"Cmd(\\'git\\') failed due to: exit code(128)\", \"stderr: \\'Cloning into ...\\'\"]}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:07:03.2212764Z', 'done': True, 'done_reason': 'stop', 'total_duration': 343588072800, 'load_duration': 251448000, 'prompt_eval_count': 829, 'prompt_eval_duration': 84212553900, 'eval_count': 129, 'eval_duration': 32748734000, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'olla",
+      "outputs": "score=1 reasoning='Fundamental failure to demonstrate judicial nuance and dialectics. The provided evidence shows a failed clone operation due to the repository not being found. This lack of basic functionality is a significant issue that cannot be overlooked. Furthermore, there is no indication of distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas, nor is there any attempt to force structured JSON output. Overall, this evidence fails to meet the rubric criterion.' cited_evidence=[\"Cmd('git') failed due to: exit code(128)\", \"stderr: 'Cloning into ...'\"]"
+    },
+    {
+      "trace_id": "019ca312-7ab9-7251-9dc2-aee2f5589fec",
+      "timestamp": "2026-02-28T10:07:03.225870",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False, location=https://github.com/example/repo)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca312-7abc-7783-9309-4fc92db60610",
+      "timestamp": "2026-02-28T10:07:03.228930",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\n\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\n- Question every claim\n- Look for security flaws, shortcuts, and laziness\n- If something seems too good to be true, it probably is\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Apply STRICT interpretation of the requirements\n3. Charge specific violations when evidence doesn't meet standards\n4. Assign LO..."
+      ]
+    },
+    {
+      "trace_id": "019ca314-96ff-7380-abba-4122c1b8d921",
+      "timestamp": "2026-02-28T10:09:21.535768",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 4, \"reasoning\": \"Although the cloning process failed due to a non-existent repository, I believe this attempt demonstrates a good understanding of the requirement to verify distinct system prompts for different personas. The fact that the code is trying to clone a repository and access specific branches suggests a deep comprehension of the task at hand. Additionally, the error message itself provides valuable insight into the expected behavior of the system, which can be used as a learning opportunity. While the implementation may not have been successful, I believe the effort and intent behind it warrant a score of 4.\", \"cited_evidence\": [\"Failed to clone: Failed to clone: Cmd(\\'git\\') failed due to: exit code(128)\"]}\\n\\n   ' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:09:21.5336699Z', 'done': True, 'done_reason': 'stop', 'total_duration': 356659550300, 'load_duration': 299503800, 'prompt_eval_count': 823, 'prompt_eval_dur",
+      "outputs": "score=4 reasoning='Although the cloning process failed due to a non-existent repository, I believe this attempt demonstrates a good understanding of the requirement to verify distinct system prompts for different personas. The fact that the code is trying to clone a repository and access specific branches suggests a deep comprehension of the task at hand. Additionally, the error message itself provides valuable insight into the expected behavior of the system, which can be used as a learning opportunity. While the implementation may not have been successful, I believe the effort and intent behind it warrant a score of 4.' cited_evidence=[\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\"]"
+    },
+    {
+      "trace_id": "019ca314-9701-7dc2-971e-b9b3dac4c287",
+      "timestamp": "2026-02-28T10:09:21.537853",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Clone Repository: Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo\n  stderr: 'Cloning into 'C:\\Users\\USER\\AppData\\Local\\Temp\\audit_nln_i0je\\repo'...\nremote: Repository not found.\nfatal: repository 'https://github.com/example/repo/' not found\n' (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca314-9703-79c0-8498-649951d6bb8d",
+      "timestamp": "2026-02-28T10:09:21.539948",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\n\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\n- Give credit for deep understanding even if implementation is flawed\n- Look for creative workarounds and clever solutions\n- Consider the \"struggle\" and iteration shown in git history\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion  \n2. Find MITIGATING factors that warrant higher ..."
+      ]
+    },
+    {
+      "trace_id": "019ca316-6650-7402-95eb-25c98f44b5e1",
+      "timestamp": "2026-02-28T10:11:20.144502",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\\n\"score\": 1,\\n\"reasoning\": \"The provided evidence indicates a failure to clone the repository, which makes it impossible to analyze the StateGraph definition or verify the use of parallel branches for Judges and Detectives. Additionally, there is no code available to assess for conditional edges that handle \\'Evidence Missing\\' or \\'Node Failure\\' scenarios.\",\\n\"cited_evidence\": [\\n\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd(\\'git\\') failed due to: exit code(128)\"\\n]\\n}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:11:20.1346092Z', 'done': True, 'done_reason': 'stop', 'total_duration': 380701572200, 'load_duration': 293269100, 'prompt_eval_count': 763, 'prompt_eval_duration': 77573045500, 'eval_count': 109, 'eval_duration': 34069412500, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca310-9727-7eb2-8361-523f5742062a-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input",
+      "outputs": "score=1 reasoning=\"The provided evidence indicates a failure to clone the repository, which makes it impossible to analyze the StateGraph definition or verify the use of parallel branches for Judges and Detectives. Additionally, there is no code available to assess for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.\" cited_evidence=[\"EVIDENCE TO ANALYZE: - Clone Repository: Failed to clone: Cmd('git') failed due to: exit code(128)\"]"
+    },
+    {
+      "trace_id": "019ca318-3671-7552-ad10-1f2c1e4e9d29",
+      "timestamp": "2026-02-28T10:13:18.961447",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"The StateGraph definition fails to demonstrate parallel branches (fan-out) for Judges and Detectives. The evidence provided shows a failed clone operation due to the repository not being found, which is a fundamental failure in meeting the rubric criterion. This lack of orchestration rigor results in a score of 1.\", \"cited_evidence\": [\"https://github.com/example/repo/\"]}\\n\\n ' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:13:18.959062Z', 'done': True, 'done_reason': 'stop', 'total_duration': 375728081700, 'load_duration': 340051200, 'prompt_eval_count': 833, 'prompt_eval_duration': 86169327000, 'eval_count': 91, 'eval_duration': 27412925900, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca312-7abc-7783-9309-4fc92db60610-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 833, 'output_tokens': 91, 'total_tokens': 924}",
+      "outputs": "score=1 reasoning='The StateGraph definition fails to demonstrate parallel branches (fan-out) for Judges and Detectives. The evidence provided shows a failed clone operation due to the repository not being found, which is a fundamental failure in meeting the rubric criterion. This lack of orchestration rigor results in a score of 1.' cited_evidence=['https://github.com/example/repo/']"
+    },
+    {
+      "trace_id": "019ca31a-5df7-7a02-bdf4-2f5837de12d2",
+      "timestamp": "2026-02-28T10:15:40.151743",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 3, \"reasoning\": \"Although the StateGraph definition is not fully implemented due to the failed cloning attempt, I can see that the effort and intent are evident in the code. The use of parallel branches for Judges and Detectives is a great idea, and the conditional edges handling \\'Evidence Missing\\' or \\'Node Failure\\' scenarios show a deep understanding of the requirements. While the implementation may not be complete, the approach is sound, and I can see that the developer was trying to tackle this complex problem. Therefore, I\\'m awarding a score of 3, acknowledging the effort and intent behind the work.\", \"cited_evidence\": [\"Clone Repository: Failed to clone\"]}\\n\\n   ' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T07:15:40.1493505Z', 'done': True, 'done_reason': 'stop', 'total_duration': 378607159100, 'load_duration': 262394500, 'prompt_eval_count': 827, 'prompt_eval_duration': 88558416400, 'eval_count': 145, 'eval_duration",
+      "outputs": "score=3 reasoning=\"Although the StateGraph definition is not fully implemented due to the failed cloning attempt, I can see that the effort and intent are evident in the code. The use of parallel branches for Judges and Detectives is a great idea, and the conditional edges handling 'Evidence Missing' or 'Node Failure' scenarios show a deep understanding of the requirements. While the implementation may not be complete, the approach is sound, and I can see that the developer was trying to tackle this complex problem. Therefore, I'm awarding a score of 3, acknowledging the effort and intent behind the work.\" cited_evidence=['Clone Repository: Failed to clone']"
+    },
+    {
+      "trace_id": "019ca31a-5e0f-7d20-9239-39c41e84fffa",
+      "timestamp": "2026-02-28T10:15:40.175888",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/example/repo",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Clone Repository', found=False, content=\"Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", location='https://github.com/example/repo', rationale=\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\\n  cmdline: git clone -v --depth=50 --branch=main -- https://github.com/example/repo C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo\\n  stderr: 'Cloning into 'C:\\\\Users\\\\USER\\\\AppData\\\\Local\\\\Temp\\\\audit_nln_i0je\\\\repo'...\\nremote: Repository not found.\\nfatal: repository 'https://github.com/example/repo/' not found\\n'\", confidence=1.0, evidence_class='Git Forensic', time",
+        "opinions": "[JudicialOpinion(judge='Defense', criterion_id='forensic_accuracy_code', criterion_name='Forensic Accuracy (Codebase)', score=3, argument=\"Although the codebase failed to clone the repository due to a non-existent repository, I believe that the effort and intent behind this attempt are commendable. The fact that they attempted to use Pydantic State models in 'src/graph.py' or 'src/state.py' shows a deep understanding of the requirement. Additionally, the inclusion of sandboxed 'git clone' operations in 'src/tools/' demonstrates a willingness to learn and experiment. While the implementation may not have been successful, I believe that this attempt deserves recognition for its creative approach and struggle to understand the requirements.\", cited_evidence=[\"Failed to clone: Failed to clone: Cmd('git') failed due to: exit code(128)\"], charge=None, mitigation='Reasoning effort shown in implementation', technical_assessment=None), JudicialOpinion(judge='Defense', criterion_id='judicial_nua",
+        "final_report": "# Automaton Auditor - Final Audit Report\n\n**Generated:** 2026-02-28 10:15:40\n**Overall Score:** 1.67 / 5.00\n\n---\n\n## Executive Summary\n\nThis audit report evaluates the Week 2 submission against the Automaton Auditor rubric.\nThe evaluation was performed using a hierarchical swarm of specialized agents operating\nin a digital courtroom paradigm.\n\n### Verdict\n**DEVELOPING ENGINEER** - Basic implementation with significant gaps.\n\n---\n\n## Criterion Breakdown\n\n### Forensic Accuracy (Codebase)\n**Score:** 2/5\n\n**Dissent:** All judges largely agreed.\n\n### Judicial Nuance & Dialectics\n**Score:** 1/5\n\n**Dissent:** Major conflict: Prosecutor=1, Defense=4, TechLead=1\n\n### LangGraph Orchestration Rigor\n**Score:** 2/5\n\n**Dissent:** All judges largely agreed.\n\n---\n\n## Judicial Opinions Summary\n\n### Forensic Accuracy (Codebase)\n\n**Defense:** Score 3/5\n_Although the codebase failed to clone the repository due to a non-existent repository, I believe that the effort and intent behind this attempt are comme... [truncated]",
+        "final_scores": "{'forensic_accuracy_code': 2, 'judicial_nuance': 1, 'langgraph_architecture': 2}",
+        "remediation_plan": "['[forensic_accuracy_code] Fix security issues: Use tempfile for git clone, add error handling. Implement Pydantic state models.', '[judicial_nuance] Create distinct judge personas with separate system prompts. Implement structured JSON output.', '[langgraph_architecture] Implement parallel execution (fan-out) for detectives and judges. Add synchronization node (fan-in).']"
+      },
+      "outputs": "__end__"
+    }
+  ]
+}

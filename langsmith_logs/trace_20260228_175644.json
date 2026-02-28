@@ -1,0 +1,383 @@
+{
+  "exported_at": "2026-02-28T17:56:44.944786",
+  "total_traces": 31,
+  "traces": [
+    {
+      "trace_id": "019ca4b1-852e-7962-98ed-74a48b43e881",
+      "timestamp": "2026-02-28T17:40:23.342485",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[{'id': 'forensic_accuracy_code', 'name': 'Forensic Accuracy (Codebase)', 'target_artifact': 'github_repo', 'forensic_instruction': \"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", 'judicial_logic': {'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}}, {'id': 'forensic_accuracy_docs', 'name': 'Forensic Accuracy (Documentation)', 'target_artifact': 'pdf_report', 'forensic_instruction': \"Scan PDF for theoretical depth. Verify mentions of 'Dialectical Synthesis' and 'Met",
+        "evidences": "{}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{}",
+        "opinions": "[]",
+        "final_report": ""
+      }
+    },
+    {
+      "trace_id": "019ca4b1-852f-7b71-8f10-865e6299cba2",
+      "timestamp": "2026-02-28T17:40:23.343933",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': []}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": "failure"
+    },
+    {
+      "trace_id": "019ca4b1-8530-7593-aecb-a1abf8df41d4",
+      "timestamp": "2026-02-28T17:40:23.344952",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': []}",
+        "opinions": "[]",
+        "final_report": ""
+      },
+      "outputs": "failure"
+    },
+    {
+      "trace_id": "019ca4b1-8e5e-7f70-ba0e-426375fdfea2",
+      "timestamp": "2026-02-28T17:40:25.694272",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "repo_local_path": "None",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Git Commit History', found=False, content='[]', location='git log', rationale='', confidence=0.0, evidence_class='Git Forensic', timestamp='2026-02-28T17:40:25.680927'), Evidence(goal='Typed State Definition', found=False, content=None, location='Not found', rationale='Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None', confidence=0.3, evidence_class='State Management', timestamp='2026-02-28T17:40:25.680965'), Evidence(goal='LangGraph StateGraph', found=False, content='{\"nodes\": [], \"edges\": []}', location='Not found', rationale='Has parallel branches: None, Fan-out: None, Fan-in: None', confidence=0.2, evidence_class='Graph Orchestration', timestamp='2026-02-28T17:40:25.680985'), Evidence(goal='Secure Tool Engineering', found=False, content=None, location='Tool implementations', rationale='', confidence=0.5, evidence_class='Security', timestamp='2026-02-28T17:40:25.680994'), Evidence(goal='Structured Output Enforcement', fo",
+        "opinions": "[]",
+        "git_history": "[]",
+        "repo_structure": "{}",
+        "final_report": ""
+      },
+      "outputs": "success"
+    },
+    {
+      "trace_id": "019ca4b1-8e5f-7001-927f-b8e203935375",
+      "timestamp": "2026-02-28T17:40:25.695030",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "repo_local_path": "None",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Git Commit History', found=False, content='[]', location='git log', rationale='', confidence=0.0, evidence_class='Git Forensic', timestamp='2026-02-28T17:40:25.680927'), Evidence(goal='Typed State Definition', found=False, content=None, location='Not found', rationale='Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None', confidence=0.3, evidence_class='State Management', timestamp='2026-02-28T17:40:25.680965'), Evidence(goal='LangGraph StateGraph', found=False, content='{\"nodes\": [], \"edges\": []}', location='Not found', rationale='Has parallel branches: None, Fan-out: None, Fan-in: None', confidence=0.2, evidence_class='Graph Orchestration', timestamp='2026-02-28T17:40:25.680985'), Evidence(goal='Secure Tool Engineering', found=False, content=None, location='Tool implementations', rationale='', confidence=0.5, evidence_class='Security', timestamp='2026-02-28T17:40:25.680994'), Evidence(goal='Structured Output Enforcement', fo",
+        "opinions": "[]",
+        "git_history": "[]",
+        "repo_structure": "{}",
+        "final_report": ""
+      },
+      "outputs": {
+        "evidence_summary": "Git Forensic: 0/1 items found\nState Management: 0/1 items found\nGraph Orchestration: 0/1 items found\nSecurity: 0/1 items found\nStructured Output: 0/1 items found",
+        "total_evidence_count": "5"
+      }
+    },
+    {
+      "trace_id": "019ca4b1-8e65-7a81-88d4-d0dec8e54b53",
+      "timestamp": "2026-02-28T17:40:25.701275",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Git Commit History:  (found=False)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False)\n\n- Secure Tool Engineering:  (found=False)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca4b1-8e67-72b2-8222-02fa63f96108",
+      "timestamp": "2026-02-28T17:40:25.703200",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Git Commit History:  (found=False, location=git log)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)\n\n- Secure Tool Engineering:  (found=False, location=Tool implementations)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False, location=Not found)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca4b1-8e68-7c72-988c-f92e5c2597fc",
+      "timestamp": "2026-02-28T17:40:25.704869",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Forensic Accuracy (Codebase)",
+        "criterion_description": "Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.",
+        "evidence_summary": "- Git Commit History: []... (found=False)\n\n- Typed State Definition: N/A... (found=False)\n\n- LangGraph StateGraph: {\"nodes\": [], \"edges\": []}... (found=False)\n\n- Secure Tool Engineering: N/A... (found=False)\n\n- Structured Output Enforcement: N/A... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca4b1-8e69-7413-a04c-6ae9057dceac",
+      "timestamp": "2026-02-28T17:40:25.705567",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca4b3-0d03-7692-a414-1de361266100",
+      "timestamp": "2026-02-28T17:42:03.651113",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\\n\"score\": 1,\\n\"reasoning\": \"The codebase lacks any production-grade engineering, Pydantic State models, or sandboxed \\'git clone\\' operations. The absence of these critical components renders the code untestable and unmaintainable.\",\\n\"cited_evidence\": [\\n    \"Git Commit History: []... (found=False)\",\\n    \"Typed State Definition: N/A... (found=False)\",\\n    \"LangGraph StateGraph: {\\\\\"nodes\\\\\": [], \\\\\"edges\\\\\": []}... (found=False)\",\\n    \"Secure Tool Engineering: N/A... (found=False)\",\\n    \"Structured Output Enforcement: N/A... (found=False)\"\\n]\\n}\\n\\n' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:42:03.6272554Z', 'done': True, 'done_reason': 'stop', 'total_duration': 97918205700, 'load_duration': 16691577700, 'prompt_eval_count': 759, 'prompt_eval_duration': 50220392800, 'eval_count': 136, 'eval_duration': 25417043900, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca4b1-8e69-7413-a04c-6ae905",
+      "outputs": "score=1 reasoning=\"The codebase lacks any production-grade engineering, Pydantic State models, or sandboxed 'git clone' operations. The absence of these critical components renders the code untestable and unmaintainable.\" cited_evidence=['Git Commit History: []... (found=False)', 'Typed State Definition: N/A... (found=False)', 'LangGraph StateGraph: {\"nodes\": [], \"edges\": []}... (found=False)', 'Secure Tool Engineering: N/A... (found=False)', 'Structured Output Enforcement: N/A... (found=False)']"
+    },
+    {
+      "trace_id": "019ca4b3-0d04-79f1-bf47-e295bec26fd4",
+      "timestamp": "2026-02-28T17:42:03.652665",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Git Commit History: []... (found=False)\n\n- Typed State Definition: N/A... (found=False)\n\n- LangGraph StateGraph: {\"nodes\": [], \"edges\": []}... (found=False)\n\n- Secure Tool Engineering: N/A... (found=False)\n\n- Structured Output Enforcement: N/A... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca4b3-0d06-7470-a15c-dfa95302d733",
+      "timestamp": "2026-02-28T17:42:03.654370",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca4b4-5957-7042-b46f-5364a5e26794",
+      "timestamp": "2026-02-28T17:43:28.727342",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"Fundamental failure to meet Forensic Accuracy (Codebase) criterion. The evidence provided does not demonstrate production-grade engineering or Pydantic State models in \\'src/graph.py\\' or \\'src/state.py\\'. Additionally, there is no indication of sandboxed \\'git clone\\' operations in \\'src/tools/\\'. This lack of evidence suggests a significant failure to meet the requirements.\", \"cited_evidence\": [\"found=False\", \"location=Not found\"]}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:43:28.725885Z', 'done': True, 'done_reason': 'stop', 'total_duration': 183016325600, 'load_duration': 16691592300, 'prompt_eval_count': 821, 'prompt_eval_duration': 63275895700, 'eval_count': 101, 'eval_duration': 17883136500, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca4b1-8e67-72b2-8222-030fbc4c5f02-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 821, 'output_tokens'",
+      "outputs": "score=1 reasoning=\"Fundamental failure to meet Forensic Accuracy (Codebase) criterion. The evidence provided does not demonstrate production-grade engineering or Pydantic State models in 'src/graph.py' or 'src/state.py'. Additionally, there is no indication of sandboxed 'git clone' operations in 'src/tools/'. This lack of evidence suggests a significant failure to meet the requirements.\" cited_evidence=['found=False', 'location=Not found']"
+    },
+    {
+      "trace_id": "019ca4b4-5958-7bc2-8ff6-387006d9d89b",
+      "timestamp": "2026-02-28T17:43:28.728248",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Git Commit History:  (found=False, location=git log)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)\n\n- Secure Tool Engineering:  (found=False, location=Tool implementations)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False, location=Not found)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca4b4-5959-7d40-b9f0-b496ad8e2ff2",
+      "timestamp": "2026-02-28T17:43:28.729190",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\n\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\n- Question every claim\n- Look for security flaws, shortcuts, and laziness\n- If something seems too good to be true, it probably is\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Apply STRICT interpretation of the requirements\n3. Charge specific violations when evidence doesn't meet standards\n4. Assign LO..."
+      ]
+    },
+    {
+      "trace_id": "019ca4b5-eafe-70a0-aaff-ead0cebf4147",
+      "timestamp": "2026-02-28T17:45:11.550518",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 3, \"reasoning\": \"While the codebase does not explicitly demonstrate production-grade engineering or Pydantic State models in \\'src/graph.py\\' or \\'src/state.py\\', I believe the effort and intent behind the work warrant a score of 3. The lack of implementation is not necessarily a reflection of the team\\'s understanding of the requirements, but rather an indication that they may have been exploring different approaches or prioritizing other aspects of the project. Additionally, the absence of \\'git clone\\' operations in \\'src/tools/\\' does not necessarily mean that the team did not consider this aspect; it could simply be that they chose to focus on other areas. I am giving credit for the effort and intent demonstrated in the codebase, even if the implementation is incomplete.\", \"cited_evidence\": [\"Git Commit History\", \"Typed State Definition\", \"LangGraph StateGraph\", \"Secure Tool Engineering\", \"Structured Output Enforcement\"]}' additional_kwargs={} response_metadata=",
+      "outputs": "score=3 reasoning=\"While the codebase does not explicitly demonstrate production-grade engineering or Pydantic State models in 'src/graph.py' or 'src/state.py', I believe the effort and intent behind the work warrant a score of 3. The lack of implementation is not necessarily a reflection of the team's understanding of the requirements, but rather an indication that they may have been exploring different approaches or prioritizing other aspects of the project. Additionally, the absence of 'git clone' operations in 'src/tools/' does not necessarily mean that the team did not consider this aspect; it could simply be that they chose to focus on other areas. I am giving credit for the effort and intent demonstrated in the codebase, even if the implementation is incomplete.\" cited_evidence=['Git Commit History', 'Typed State Definition', 'LangGraph StateGraph', 'Secure Tool Engineering', 'Structured Output Enforcement']"
+    },
+    {
+      "trace_id": "019ca4b5-eaff-7b83-adff-842540730f93",
+      "timestamp": "2026-02-28T17:45:11.551659",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "Judicial Nuance & Dialectics",
+        "criterion_description": "Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead personas have distinct, conflicting system prompts. Check if the graph forces structured JSON output.",
+        "evidence_summary": "- Git Commit History:  (found=False)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False)\n\n- Secure Tool Engineering:  (found=False)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca4b5-eb00-7ba3-9015-94a9ce39d35f",
+      "timestamp": "2026-02-28T17:45:11.552688",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\n\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\n- Give credit for deep understanding even if implementation is flawed\n- Look for creative workarounds and clever solutions\n- Consider the \"struggle\" and iteration shown in git history\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion  \n2. Find MITIGATING factors that warrant higher ..."
+      ]
+    },
+    {
+      "trace_id": "019ca4b7-4ffb-7c00-b593-e156c19b0597",
+      "timestamp": "2026-02-28T17:46:42.939042",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"The code does not meet the criteria for Judicial Nuance & Dialectics. The absence of any evidence in the provided commit history, typed state definition, LangGraph StateGraph, and secure tool engineering suggests that the system is not functional or maintainable. Furthermore, the lack of distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas implies that the graph does not force structured JSON output. Therefore, I score this criterion as 1, indicating a broken code with high technical debt.\", \"cited_evidence\": [\"Git Commit History\", \"Typed State Definition\", \"LangGraph StateGraph\", \"Secure Tool Engineering\"]}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:46:42.9374013Z', 'done': True, 'done_reason': 'stop', 'total_duration': 279282146400, 'load_duration': 193733400, 'prompt_eval_count': 756, 'prompt_eval_duration': 56151301400, 'eval_count': 139, 'eval_duration': 28724730300, '",
+      "outputs": "score=1 reasoning='The code does not meet the criteria for Judicial Nuance & Dialectics. The absence of any evidence in the provided commit history, typed state definition, LangGraph StateGraph, and secure tool engineering suggests that the system is not functional or maintainable. Furthermore, the lack of distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas implies that the graph does not force structured JSON output. Therefore, I score this criterion as 1, indicating a broken code with high technical debt.' cited_evidence=['Git Commit History', 'Typed State Definition', 'LangGraph StateGraph', 'Secure Tool Engineering']"
+    },
+    {
+      "trace_id": "019ca4b7-4ffc-7fa0-ae03-115c8745c3b9",
+      "timestamp": "2026-02-28T17:46:42.940287",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Git Commit History: []... (found=False)\n\n- Typed State Definition: N/A... (found=False)\n\n- LangGraph StateGraph: {\"nodes\": [], \"edges\": []}... (found=False)\n\n- Secure Tool Engineering: N/A... (found=False)\n\n- Structured Output Enforcement: N/A... (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\\n\\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\\n- Focus on whether the code is functional and maintainable\\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\\n- Assess technical debt and practical concerns\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Assess TECHNICAL soundness and maintainability\\n3. Identify specific technical issues and remediation steps\\n4. Provide realistic scores based on what actually works\\n\\nTECHNICAL THINGS TO CHECK:\\n- Are state reducers (operator.add, operator.ior) preventing data loss?\\n- Are tool calls isolated and safe?\\n- Is the graph structure actually compilable/runnable?\\n- Is there proper error handling?\\n- Is the code maintainable by a team?\\n\\nSCORING GUIDELINES:\\n- Score 1: Broken, won\\'t work, high technical debt\\n- Score 2: Works but with significant issues\\"
+    },
+    {
+      "trace_id": "019ca4b7-4ffd-7f01-99ac-f8f31e88aada",
+      "timestamp": "2026-02-28T17:46:42.941639",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE TECH LEAD in a digital courtroom. Your role is to be PRACTICAL and ASSESS REAL-WORLD VIABILITY.\n\nCORE PHILOSOPHY: \"Does it actually work? Is it maintainable?\"\n- Focus on whether the code is functional and maintainable\n- Ignore \"vibe\" and \"effort\" - focus on artifacts\n- Assess technical debt and practical concerns\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Assess TECHNICAL soundness and maintainability\n3. Identify specific technical issues and rem..."
+      ]
+    },
+    {
+      "trace_id": "019ca4b9-37d4-72d0-9dfa-b6b7084543e6",
+      "timestamp": "2026-02-28T17:48:47.828822",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"Fundamental failure to demonstrate judicial nuance and dialectics. The evidence provided does not show distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas. Additionally, the graph does not force structured JSON output. This lack of nuance and dialectics is a fundamental failure that cannot be overlooked.\", \"cited_evidence\": [\"Git Commit History: (found=False, location=git log)\", \"Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)\", \"LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)\", \"Secure Tool Engineering:  (found=False, location=Tool implementations)\", \"Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False, location=Not found)\"]}' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:48:47.8267938Z', 'don",
+      "outputs": "score=1 reasoning='Fundamental failure to demonstrate judicial nuance and dialectics. The evidence provided does not show distinct, conflicting system prompts for Prosecutor, Defense, and Tech Lead personas. Additionally, the graph does not force structured JSON output. This lack of nuance and dialectics is a fundamental failure that cannot be overlooked.' cited_evidence=['Git Commit History: (found=False, location=git log)', 'Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)', 'LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)', 'Secure Tool Engineering:  (found=False, location=Tool implementations)', 'Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False, location=Not found)']"
+    },
+    {
+      "trace_id": "019ca4b9-37d6-71f1-b28f-2269e00b58f0",
+      "timestamp": "2026-02-28T17:48:47.830590",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Git Commit History:  (found=False, location=git log)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)\n\n- Secure Tool Engineering:  (found=False, location=Tool implementations)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False, location=Not found)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\\n\\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\\n- Question every claim\\n- Look for security flaws, shortcuts, and laziness\\n- If something seems too good to be true, it probably is\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion\\n2. Apply STRICT interpretation of the requirements\\n3. Charge specific violations when evidence doesn\\'t meet standards\\n4. Assign LOW scores when you find issues\\n\\nVIOLATIONS TO LOOK FOR:\\n- \"Orchestration Fraud\": Linear pipeline instead of parallel fan-out\\n- \"Security Negligence\": Raw os.system without sandboxing\\n- \"Hallucination Liability\": Free-text outputs instead of structured JSON\\n- \"Persona Collusion\": Judges that share 90% of the same prompt\\n- \"Auditor Hallucination\": Claims in report not backed by code\\n\\nSCORING GUIDELINES:\\n- Score 1: Fundamental failure, missing core requ"
+    },
+    {
+      "trace_id": "019ca4b9-37d8-7703-98f1-e4a5f279e9d4",
+      "timestamp": "2026-02-28T17:48:47.832381",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE PROSECUTOR in a digital courtroom. Your role is to be CRITICAL and SUSPICIOUS of all evidence.\n\nCORE PHILOSOPHY: \"Trust No One. Assume Vibe Coding.\"\n- Question every claim\n- Look for security flaws, shortcuts, and laziness\n- If something seems too good to be true, it probably is\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion\n2. Apply STRICT interpretation of the requirements\n3. Charge specific violations when evidence doesn't meet standards\n4. Assign LO..."
+      ]
+    },
+    {
+      "trace_id": "019ca4bb-3a9e-7443-9b70-766b1b088d8b",
+      "timestamp": "2026-02-28T17:50:59.614591",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 3, \"reasoning\": \"While the submission does not explicitly demonstrate distinct system prompts for Prosecutor, Defense, and Tech Lead personas, nor forces structured JSON output, I believe there is merit in their effort. The absence of these features may be due to a focus on other aspects of the project, rather than a lack of understanding or intent. Additionally, the use of Pydantic and TypedDict in the typed state definition shows a willingness to adopt best practices for data modeling. This demonstrates a deep comprehension of the requirements, even if not fully implemented. I am awarding a score of 3, acknowledging the effort and intent behind this submission.\", \"cited_evidence\": [\"Git Commit History: (found=False)\", \"Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)\", \"LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False)\", \"Secure Tool Engineering:  (found=False)\", \"Structur",
+      "outputs": "score=3 reasoning='While the submission does not explicitly demonstrate distinct system prompts for Prosecutor, Defense, and Tech Lead personas, nor forces structured JSON output, I believe there is merit in their effort. The absence of these features may be due to a focus on other aspects of the project, rather than a lack of understanding or intent. Additionally, the use of Pydantic and TypedDict in the typed state definition shows a willingness to adopt best practices for data modeling. This demonstrates a deep comprehension of the requirements, even if not fully implemented. I am awarding a score of 3, acknowledging the effort and intent behind this submission.' cited_evidence=['Git Commit History: (found=False)', 'Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)', 'LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False)', 'Secure Tool Engineering:  (found=False)', 'Structured Output Enforcement"
+    },
+    {
+      "trace_id": "019ca4bb-3a9f-7592-b823-61d2d84cb560",
+      "timestamp": "2026-02-28T17:50:59.615972",
+      "event": "chain_end",
+      "node": "ChatPromptTemplate",
+      "inputs": {
+        "criterion_name": "LangGraph Orchestration Rigor",
+        "criterion_description": "Analyze the StateGraph definition. Verify the use of parallel branches (fan-out) for Judges and Detectives. Check for conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios.",
+        "evidence_summary": "- Git Commit History:  (found=False)\n\n- Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)\n\n- LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False)\n\n- Secure Tool Engineering:  (found=False)\n\n- Structured Output Enforcement: Uses with_structured_output: None, Uses bind_tools: None (found=False)",
+        "format_instructions": "The output should be formatted as a JSON instance that conforms to the JSON schema below.\n\nAs an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}\nthe object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.\n\nHere is the output schema:\n```\n{\"description\": \"Structured output for judge scoring.\", \"properties\": {\"score\": {\"description\": \"Score from 1-5\", \"maximum\": 5, \"minimum\": 1, \"title\": \"Score\", \"type\": \"integer\"}, \"reasoning\": {\"description\": \"Detailed reasoning for the score\", \"title\": \"Reasoning\", \"type\": \"string\"}, \"cited_evidence\": {\"description\": \"List of evidence IDs or locations cited\", \"items\": {\"type\": \"string\"}, \"title\": \"Cited Evidence\", \"type\": \"array\"}}, \"required\": [\"score\", \"reasoning\"]}\n```"
+      },
+      "outputs": "messages=[SystemMessage(content='You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\\n\\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\\n- Give credit for deep understanding even if implementation is flawed\\n- Look for creative workarounds and clever solutions\\n- Consider the \"struggle\" and iteration shown in git history\\n\\nYOUR JOB:\\n1. Analyze the evidence provided for each rubric criterion  \\n2. Find MITIGATING factors that warrant higher scores\\n3. Highlight creative solutions and deep thought\\n4. Argue for GENEROUS scores when there\\'s genuine effort\\n\\nMITIGATION ARGUMENTS TO CONSIDER:\\n- \"Deep Code Comprehension\": Sophisticated AST parsing despite syntax issues\\n- \"Engineering Process\": Meaningful git commit progression shows struggle/learning\\n- \"Partial Implementation\": Even if not complete, the approach is sound\\n- \"Role Separation Success\": Distinct personas despite some overlap\\n\\nSCORIN"
+    },
+    {
+      "trace_id": "019ca4bb-3aa1-7d82-87d2-9025ef1e9f4c",
+      "timestamp": "2026-02-28T17:50:59.617308",
+      "event": "llm_end",
+      "model": "ChatOllama",
+      "prompts": [
+        "System: You are THE DEFENSE ATTORNEY in a digital courtroom. Your role is to be OPTIMISTIC and FIND MERIT in the work.\n\nCORE PHILOSOPHY: \"Reward Effort and Intent. Look for the Spirit of the Law.\"\n- Give credit for deep understanding even if implementation is flawed\n- Look for creative workarounds and clever solutions\n- Consider the \"struggle\" and iteration shown in git history\n\nYOUR JOB:\n1. Analyze the evidence provided for each rubric criterion  \n2. Find MITIGATING factors that warrant higher ..."
+      ]
+    },
+    {
+      "trace_id": "019ca4bc-981e-7cc2-83a4-b56452039ee8",
+      "timestamp": "2026-02-28T17:52:29.086550",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\\n\"score\": 1,\\n\"reasoning\": \"The LangGraph StateGraph definition is empty, indicating that there are no nodes or edges defined. This means that the parallel branches for Judges and Detectives cannot be implemented, as there is no graph structure to work with. Additionally, conditional edges that handle \\'Evidence Missing\\' or \\'Node Failure\\' scenarios are also not possible without a defined graph.\",\\n\"cited_evidence\": [\"LangGraph StateGraph\"]\\n}\\n\\n' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:52:29.0846904Z', 'done': True, 'done_reason': 'stop', 'total_duration': 346141434100, 'load_duration': 250183100, 'prompt_eval_count': 760, 'prompt_eval_duration': 65994590200, 'eval_count': 94, 'eval_duration': 19157544500, 'logprobs': None, 'model_name': 'llama3', 'model_provider': 'ollama'} id='lc_run--019ca4b7-4ffd-7f01-99ac-f8f31e88aada-0' tool_calls=[] invalid_tool_calls=[] usage_metadata={'input_tokens': 760, 'output_tokens': 94, 'tota",
+      "outputs": "score=1 reasoning=\"The LangGraph StateGraph definition is empty, indicating that there are no nodes or edges defined. This means that the parallel branches for Judges and Detectives cannot be implemented, as there is no graph structure to work with. Additionally, conditional edges that handle 'Evidence Missing' or 'Node Failure' scenarios are also not possible without a defined graph.\" cited_evidence=['LangGraph StateGraph']"
+    },
+    {
+      "trace_id": "019ca4be-7e10-74b3-8355-018ed47da49f",
+      "timestamp": "2026-02-28T17:54:33.488811",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 1, \"reasoning\": \"Fundamental failure to demonstrate LangGraph Orchestration Rigor. The StateGraph definition is missing, and there is no evidence of parallel branches (fan-out) for Judges and Detectives. This lack of orchestration rigor raises significant concerns about the ability to handle \\'Evidence Missing\\' or \\'Node Failure\\' scenarios.\", \"cited_evidence\": [\"Git Commit History:  (found=False, location=git log)\", \"Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)\", \"LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)\"]}\\n\\n ' additional_kwargs={} response_metadata={'model': 'llama3', 'created_at': '2026-02-28T14:54:33.4864749Z', 'done': True, 'done_reason': 'stop', 'total_duration': 345652712000, 'load_duration': 223831700, 'prompt_eval_count': 822, 'prompt_eval_duration': 71214134300, 'eval_count': 162, 'eval_duration': 43833264000,",
+      "outputs": "score=1 reasoning=\"Fundamental failure to demonstrate LangGraph Orchestration Rigor. The StateGraph definition is missing, and there is no evidence of parallel branches (fan-out) for Judges and Detectives. This lack of orchestration rigor raises significant concerns about the ability to handle 'Evidence Missing' or 'Node Failure' scenarios.\" cited_evidence=['Git Commit History:  (found=False, location=git log)', 'Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False, location=Not found)', 'LangGraph StateGraph: Has parallel branches: None, Fan-out: None, Fan-in: None (found=False, location=Not found)']"
+    },
+    {
+      "trace_id": "019ca4c0-7f76-7f23-b8d2-251c47e2d287",
+      "timestamp": "2026-02-28T17:56:44.918364",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": "content='{\"score\": 3, \"reasoning\": \"Although the LangGraph StateGraph definition is not fully implemented, I can see that the team has made an effort to understand the requirements. The lack of parallel branches and conditional edges might be due to a misunderstanding or a focus on other aspects of the project. However, I appreciate their attempt to use Pydantic and TypedDict for typed state definitions, even if it\\'s not fully utilized. This shows that they\\'re willing to learn and adapt to new technologies. Additionally, the absence of Secure Tool Engineering and Structured Output Enforcement might be due to a lack of resources or expertise in these areas, rather than a complete disregard for security and output structure. Overall, I believe this team has shown some effort and understanding of the requirements, even if it\\'s not fully implemented.\", \"cited_evidence\": [\"Git Commit History:  (found=False)\", \"Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducer",
+      "outputs": "score=3 reasoning=\"Although the LangGraph StateGraph definition is not fully implemented, I can see that the team has made an effort to understand the requirements. The lack of parallel branches and conditional edges might be due to a misunderstanding or a focus on other aspects of the project. However, I appreciate their attempt to use Pydantic and TypedDict for typed state definitions, even if it's not fully utilized. This shows that they're willing to learn and adapt to new technologies. Additionally, the absence of Secure Tool Engineering and Structured Output Enforcement might be due to a lack of resources or expertise in these areas, rather than a complete disregard for security and output structure. Overall, I believe this team has shown some effort and understanding of the requirements, even if it's not fully implemented.\" cited_evidence=['Git Commit History:  (found=False)', 'Typed State Definition: Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None (found=False)', "
+    },
+    {
+      "trace_id": "019ca4c0-7f8c-7aa0-86bd-087186455704",
+      "timestamp": "2026-02-28T17:56:44.941027",
+      "event": "chain_end",
+      "node": "unknown",
+      "inputs": {
+        "repo_url": "https://github.com/hydropython/forensic-swarm-auditor",
+        "pdf_path": "",
+        "has_repo": "True",
+        "has_pdf": "False",
+        "repo_local_path": "None",
+        "rubric_dimensions": "[RubricDimension(id='forensic_accuracy_code', name='Forensic Accuracy (Codebase)', target_artifact='github_repo', forensic_instruction=\"Trace the repository for production-grade engineering. Verify Pydantic State models in 'src/graph.py' or 'src/state.py'. Check 'src/tools/' for sandboxed 'git clone' operations.\", judicial_logic={'prosecutor': \"If tool execution relies on raw 'os.system' without error handling or sandboxing, charge with 'Security Negligence'. If Pydantic is missing entirely, score max 2.\", 'defense': 'Highlight any creative use of AST parsing to read LangGraph node definitions despite environment constraints.', 'tech_lead': \"Assess the state reducers. Are 'operator.add' or 'operator.ior' used correctly to prevent data loss during parallel execution?\"}), RubricDimension(id='judicial_nuance', name='Judicial Nuance & Dialectics', target_artifact='github_repo', forensic_instruction=\"Scan 'src/nodes/' or prompt templates. Verify that Prosecutor, Defense, and Tech Lead perso",
+        "evidences": "{'doc': [], 'vision': [], 'repo': [Evidence(goal='Git Commit History', found=False, content='[]', location='git log', rationale='', confidence=0.0, evidence_class='Git Forensic', timestamp='2026-02-28T17:40:25.680927'), Evidence(goal='Typed State Definition', found=False, content=None, location='Not found', rationale='Uses Pydantic: None, Uses TypedDict: None, Has Reducers: None', confidence=0.3, evidence_class='State Management', timestamp='2026-02-28T17:40:25.680965'), Evidence(goal='LangGraph StateGraph', found=False, content='{\"nodes\": [], \"edges\": []}', location='Not found', rationale='Has parallel branches: None, Fan-out: None, Fan-in: None', confidence=0.2, evidence_class='Graph Orchestration', timestamp='2026-02-28T17:40:25.680985'), Evidence(goal='Secure Tool Engineering', found=False, content=None, location='Tool implementations', rationale='', confidence=0.5, evidence_class='Security', timestamp='2026-02-28T17:40:25.680994'), Evidence(goal='Structured Output Enforcement', fo",
+        "opinions": "[JudicialOpinion(judge='Defense', criterion_id='forensic_accuracy_code', criterion_name='Forensic Accuracy (Codebase)', score=3, argument=\"While the codebase does not explicitly demonstrate production-grade engineering or Pydantic State models in 'src/graph.py' or 'src/state.py', I believe the effort and intent behind the work warrant a score of 3. The lack of implementation is not necessarily a reflection of the team's understanding of the requirements, but rather an indication that they may have been exploring different approaches or prioritizing other aspects of the project. Additionally, the absence of 'git clone' operations in 'src/tools/' does not necessarily mean that the team did not consider this aspect; it could simply be that they chose to focus on other areas. I am giving credit for the effort and intent demonstrated in the codebase, even if the implementation is incomplete.\", cited_evidence=['Git Commit History', 'Typed State Definition', 'LangGraph StateGraph', 'Secure To",
+        "git_history": "[]",
+        "repo_structure": "{}",
+        "final_report": "# Automaton Auditor - Final Audit Report\n\n**Generated:** 2026-02-28 17:56:44\n**Overall Score:** 2.33 / 5.00\n\n---\n\n## Executive Summary\n\nThis audit report evaluates the Week 2 submission against the Automaton Auditor rubric.\nThe evaluation was performed using a hierarchical swarm of specialized agents operating\nin a digital courtroom paradigm.\n\n### Verdict\n**DEVELOPING ENGINEER** - Basic implementation with significant gaps.\n\n---\n\n## Criterion Breakdown\n\n### Forensic Accuracy (Codebase)\n**Score:** 2/5\n\n**Dissent:** All judges largely agreed.\n\n### Judicial Nuance & Dialectics\n**Score:** 2/5\n\n**Dissent:** All judges largely agreed.\n\n### LangGraph Orchestration Rigor\n**Score:** 3/5\n\n**Dissent:** Prosecutor correctly identified security flaw. Defense and TechLead overruled.\n\n---\n\n## Judicial Opinions Summary\n\n### Forensic Accuracy (Codebase)\n\n**Defense:** Score 3/5\n_While the codebase does not explicitly demonstrate production-grade engineering or Pydantic State models in 'src/graph.py' or ... [truncated]",
+        "final_scores": "{'forensic_accuracy_code': 2, 'judicial_nuance': 2, 'langgraph_architecture': 3}",
+        "remediation_plan": "['[forensic_accuracy_code] Fix security issues: Use tempfile for git clone, add error handling. Implement Pydantic state models.', '[judicial_nuance] Create distinct judge personas with separate system prompts. Implement structured JSON output.', '[langgraph_architecture] Implement parallel execution (fan-out) for detectives and judges. Add synchronization node (fan-in).']"
+      },
+      "outputs": "__end__"
+    }
+  ]
+}
