@@ -2,7 +2,7 @@ import argparse
 import os
 import json
 from datetime import datetime
-from .graph import create_audit_graph
+from .graph import create_audit_graph, create_trace_handler
 from pydantic.v1.fields import FieldInfo
 from dotenv import load_dotenv
 
@@ -29,10 +29,22 @@ def main():
         "final_report": ""
     }
 
+    # Create trace handler for local logging
+    trace_handler = create_trace_handler()
+    
     # 4. Execute the Swarm
     print(f"Running audit on: {args.repo}...")
     app = create_audit_graph()
-    final_state = app.invoke(initial_state)
+    
+    # Run with tracing callbacks
+    final_state = app.invoke(
+        initial_state,
+        config={"callbacks": [trace_handler]}
+    )
+
+    # Save traces to langsmith_logs/
+    trace_file = trace_handler.save_traces()
+    print(f"Traces saved to: {trace_file}")
 
     # 5. Determine Output Folder
     if args.mode == "self":

@@ -31,6 +31,8 @@ from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_openai import ChatOpenAI
 from langchain_ollama import ChatOllama
+from langchain_core.callbacks import BaseCallbackHandler
+from langchain_core.outputs import LLMResult
 
 from src.state import AgentState, RubricDimension
 from src.nodes.detectives import (
@@ -47,6 +49,171 @@ from src.nodes.justice import (
     create_chief_justice_node,
     create_evidence_aggregator_node
 )
+
+
+# ============================================================================
+# Local LangSmith-Style JSON Trace Handler
+# ============================================================================
+
+class LocalTraceHandler(BaseCallbackHandler):
+    """
+    Custom callback handler that saves LangSmith-style traces to local JSON files.
+    Saves traces to the langsmith_logs/ directory.
+    """
+    
+    def __init__(self, log_dir: str = "langsmith_logs"):
+        self.log_dir = log_dir
+        self.traces = []
+        self.current_trace = None
+        os.makedirs(log_dir, exist_ok=True)
+    
+    def on_llm_start(self, serialized: Dict[str, Any], prompts: List[str], **kwargs) -> None:
+        """Called when LLM starts processing."""
+        try:
+            trace_id = kwargs.get('run_id')
+            if trace_id:
+                trace_id = str(trace_id)
+            else:
+                trace_id = 'unknown'
+            
+            # Safely get the model name
+            model_name = 'unknown'
+            if serialized:
+                name = serialized.get('name') or serialized.get('id')
+                if name:
+                    model_name = name if isinstance(name, str) else str(name[-1] if name else 'unknown')
+            
+            self.current_trace = {
+                "trace_id": trace_id,
+                "timestamp": datetime.now().isoformat(),
+                "event": "llm_start",
+                "model": model_name,
+                "prompts": [p[:500] + "..." if len(p) > 500 else p for p in prompts] if prompts else [],
+            }
+        except Exception as e:
+            print(f"Error in on_llm_start: {e}")
+            self.current_trace = None
+    
+    def on_llm_end(self, response: LLMResult, **kwargs) -> None:
+        """Called when LLM finishes processing."""
+        try:
+            if self.current_trace:
+                self.current_trace["event"] = "llm_end"
+                # Extract token usage if available
+                try:
+                    if response.llm_output:
+                        self.current_trace["llm_output"] = str(response.llm_output)[:500]
+                except:
+                    pass
+                self.traces.append(self.current_trace)
+                self.current_trace = None
+        except Exception as e:
+            print(f"Error in on_llm_end: {e}")
+            if self.current_trace:
+                self.traces.append(self.current_trace)
+                self.current_trace = None
+    
+    def on_llm_error(self, error: Exception, **kwargs) -> None:
+        """Called when LLM errors."""
+        if self.current_trace:
+            self.current_trace["event"] = "llm_error"
+            self.current_trace["error"] = str(error)[:500]
+            self.traces.append(self.current_trace)
+            self.current_trace = None
+    
+    def on_chain_start(self, serialized: Dict[str, Any], inputs: Dict[str, Any], **kwargs) -> None:
+        """Called when a chain/node starts."""
+        try:
+            trace_id = kwargs.get('run_id')
+            if trace_id:
+                trace_id = str(trace_id)
+            else:
+                trace_id = 'unknown'
+            
+            # Safely get the node name
+            node_name = 'unknown'
+            if serialized:
+                name = serialized.get('name') or serialized.get('id')
+                if name:
+                    node_name = name if isinstance(name, str) else str(name[-1] if name else 'unknown')
+            
+            self.current_trace = {
+                "trace_id": trace_id,
+                "timestamp": datetime.now().isoformat(),
+                "event": "chain_start",
+                "node": node_name,
+                "inputs": self._sanitize_inputs(inputs)
+            }
+        except Exception as e:
+            print(f"Error in on_chain_start: {e}")
+            self.current_trace = None
+    
+    def on_chain_end(self, outputs: Any, **kwargs) -> None:
+        """Called when a chain/node finishes."""
+        try:
+            if self.current_trace:
+                self.current_trace["event"] = "chain_end"
+                self.current_trace["outputs"] = self._sanitize_outputs(outputs)
+                self.traces.append(self.current_trace)
+                self.current_trace = None
+        except Exception as e:
+            print(f"Error in on_chain_end: {e}")
+            if self.current_trace:
+                self.traces.append(self.current_trace)
+                self.current_trace = None
+    
+    def on_chain_error(self, error: Exception, **kwargs) -> None:
+        """Called when a chain/node errors."""
+        if self.current_trace:
+            self.current_trace["event"] = "chain_error"
+            self.current_trace["error"] = str(error)[:500]
+            self.traces.append(self.current_trace)
+            self.current_trace = None
+    
+    def _sanitize_inputs(self, inputs: Any) -> Any:
+        """Sanitize inputs for logging (truncate long values)."""
+        if inputs is None:
+            return "None"
+        
+        if isinstance(inputs, dict):
+            sanitized = {}
+            for k, v in inputs.items():
+                if v is None:
+                    sanitized[k] = "None"
+                elif isinstance(v, str) and len(v) > 1000:
+                    sanitized[k] = v[:1000] + "... [truncated]"
+                elif hasattr(v, 'to_json'):  # Handle ChatPromptValue etc
+                    sanitized[k] = str(v)[:1000]
+                else:
+                    sanitized[k] = str(v)[:1000]
+            return sanitized
+        else:
+            return str(inputs)[:1000]
+    
+    def _sanitize_outputs(self, outputs: Any) -> Any:
+        """Sanitize outputs for logging."""
+        return self._sanitize_inputs(outputs)
+    
+    def save_traces(self, filename: str = None) -> str:
+        """Save all collected traces to a JSON file."""
+        if not filename:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"trace_{timestamp}.json"
+        
+        filepath = os.path.join(self.log_dir, filename)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump({
+                "exported_at": datetime.now().isoformat(),
+                "total_traces": len(self.traces),
+                "traces": self.traces
+            }, f, indent=2, ensure_ascii=False)
+        
+        return filepath
+
+
+def create_trace_handler() -> LocalTraceHandler:
+    """Create a new trace handler instance."""
+    return LocalTraceHandler(log_dir="langsmith_logs")
 
 
 # ============================================================================
@@ -325,6 +492,11 @@ def create_audit_graph(
     workflow.add_edge("evidence_aggregator", "techlead")
     
     # All judges run in parallel, then fan-in to chief justice
+    # Connect judges to chief_justice (fan-in)
+    workflow.add_edge("prosecutor", "chief_justice")
+    workflow.add_edge("defense", "chief_justice")
+    workflow.add_edge("techlead", "chief_justice")
+    
     # Add conditional edge for judges completion check
     workflow.add_conditional_edges(
         "chief_justice",
