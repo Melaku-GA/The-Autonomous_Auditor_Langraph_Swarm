@@ -3,7 +3,7 @@
 .env.example 
 dist/
 coverage/
-audit/
+
 .DS_Store
 .idea/
 *.iml

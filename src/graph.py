@@ -263,7 +263,7 @@ def reduce_opinions(existing: List, new: List) -> List:
 # ============================================================================
 
 def load_rubric(state: AgentState) -> AgentState:
-    """Load the rubric dimensions from the JSON file."""
+    """Load the rubric dimensions from the JSON file and filter based on available inputs."""
     rubric_path = os.path.join(os.path.dirname(__file__), '..', 'rubric', 'week2_rubric.json')
     
     if not os.path.exists(rubric_path):
@@ -275,9 +275,28 @@ def load_rubric(state: AgentState) -> AgentState:
     
     dimensions = [RubricDimension(**d) for d in rubric_data['dimensions']]
     
+    # Filter dimensions based on available inputs
+    has_repo = state.get('has_repo', False)
+    has_pdf = state.get('has_pdf', False)
+    
+    filtered_dimensions = []
+    for dim in dimensions:
+        if dim.target_artifact == "github_repo" and has_repo:
+            filtered_dimensions.append(dim)
+        elif dim.target_artifact == "pdf_report" and has_pdf:
+            filtered_dimensions.append(dim)
+        elif dim.target_artifact == "images":
+            # Include image-based dimensions if we have any input
+            # (vision inspector can handle empty image lists)
+            filtered_dimensions.append(dim)
+    
+    # If no dimensions match, include all (for compatibility)
+    if not filtered_dimensions:
+        filtered_dimensions = dimensions
+    
     return {
         **state,
-        'rubric_dimensions': dimensions
+        'rubric_dimensions': filtered_dimensions
     }
 
 
@@ -444,6 +463,7 @@ def create_audit_graph(
     workflow.set_entry_point("load_rubric")
     
     # Load rubric transitions - fan-out to all detectives
+    # Each detective will check if its input is available and handle missing input gracefully
     workflow.add_edge("load_rubric", "repo_investigator")
     workflow.add_edge("load_rubric", "doc_analyst")
     workflow.add_edge("load_rubric", "vision_inspector")

@@ -10,10 +10,23 @@ def main():
     # Load environment variables from .env file
     load_dotenv()
     parser = argparse.ArgumentParser(description="Automaton Auditor CLI")
-    parser.add_argument("--repo", required=True, help="Target GitHub Repository URL")
-    parser.add_argument("--pdf", required=True, help="Path to the Architectural PDF Report")
+    parser.add_argument("--repo", required=False, default="", help="Target GitHub Repository URL (optional)")
+    parser.add_argument("--pdf", required=False, default="", help="Path to the Architectural PDF Report (optional)")
     parser.add_argument("--mode", choices=["self", "peer"], default="self", help="Audit mode")
     args = parser.parse_args()
+
+    # Validate that at least one input is provided
+    if not args.repo and not args.pdf:
+        parser.error("At least one of --repo or --pdf must be provided")
+
+    # Determine which inputs are available
+    has_repo = bool(args.repo)
+    has_pdf = bool(args.pdf)
+
+    print(f"Audit Configuration:")
+    print(f"  - GitHub Repository: {args.repo if has_repo else 'Not provided'}")
+    print(f"  - PDF Report: {args.pdf if has_pdf else 'Not provided'}")
+    print()
 
     # 2. Load the Constitution (Rubric)
     with open("rubric/week2_rubric.json", "r") as f:
@@ -23,6 +36,8 @@ def main():
     initial_state = {
         "repo_url": args.repo,
         "pdf_path": args.pdf,
+        "has_repo": has_repo,
+        "has_pdf": has_pdf,
         "rubric_dimensions": rubric_data["dimensions"],
         "evidences": {},
         "opinions": [],
@@ -33,7 +48,8 @@ def main():
     trace_handler = create_trace_handler()
     
     # 4. Execute the Swarm
-    print(f"Running audit on: {args.repo}...")
+    target = args.repo if has_repo else args.pdf
+    print(f"Running audit on: {target}...")
     app = create_audit_graph()
     
     # Run with tracing callbacks

@@ -108,6 +108,8 @@ class AgentState(TypedDict):
     # Input parameters
     repo_url: str
     pdf_path: str
+    has_repo: bool  # Whether GitHub repo input is provided
+    has_pdf: bool   # Whether PDF report input is provided
     repo_local_path: Optional[str]
     
     # Rubric configuration
